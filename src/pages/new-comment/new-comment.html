@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Ajouter commentaire</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="onAddComment(f.value)" #f="ngForm">
+    <ion-item>
+      <ion-label>Titre</ion-label>
+      <ion-input type="text" name="title" ngModel required></ion-input>
+    </ion-item>
+    <button ion-button block type="submit" [disabled]="!f.valid">Nouveau</button>
+  </form>
+</ion-content>
